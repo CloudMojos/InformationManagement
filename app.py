@@ -152,13 +152,14 @@ def change_course():
 def login():
   if request.method == 'POST':
     email = request.form['email']
-    stdnt_email = Students.query.filter_by(email = email).first().email
-    if student:
-      session.permanent = True
-      session["email"] = stdnt_email
-      return redirect(url_for('student'))
-    else:
-      return render_template("login.html")
+    try:
+      stdnt_email = Students.query.filter_by(email = email).first().email
+      if student:
+        session.permanent = True
+        session["email"] = stdnt_email
+        return redirect(url_for('student'))
+    except:
+       return render_template("login.html")
 
   else:
     return render_template("login.html")
