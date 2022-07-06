@@ -1,0 +1,83 @@
+{% extends 'master.html' %}
+
+{% block head %} <title>TUP Student</title> {% endblock %}
+
+{% block nav_active %}
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link"  href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active " href="#">Student</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="logout">Logout</a>
+        </li>
+      </ul>
+{% endblock %}
+
+{% block body %}
+<div class="accordion m-5" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        Student Information
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <ul class="list-group">
+          <li class="list-group-item">First name: {{s.fname}}</li>
+          <li class="list-group-item">Middle name: {{s.mname}}</li>
+          <li class="list-group-item">Surname: {{s.sname}}</li>
+          <li class="list-group-item">Extension name: {{s.ename}}</li>
+          <li class="list-group-item">Email: {{s.email}}</li>
+          <li class="list-group-item">Phone number: {{s.cpnum}}</li>
+          <li class="list-group-item">Landline: {{s.llnum}}</li>
+          <li class="list-group-item">Facebook URL: {{s.fbrul}}</li>
+          <li class="list-group-item">Learner's Reference Number: {{s.lrn}}</li>
+          <li class="list-group-item">Birthday: {{s.bday}}</li>
+          <li class="list-group-item">Gender: {{s.gender}}</li>
+          <li class="list-group-item">Citizenship: {{s.citizenship}}</li>
+          <li class="list-group-item">Birth Place: {{s.birthplace}}</li>
+          <li class="list-group-item">Religion: {{s.religion}}</li>
+          <li class="list-group-item">Civil Status: {{s.cstatus}}</li>
+          <li class="list-group-item">Financial Support: {{s.fsupport}}</li>
+          <li class="list-group-item">Height: {{s.height}}</li>
+          <li class="list-group-item">Weight: {{s.weight}}</li>
+          <li class="list-group-item">Unit Number: {{s.unum}}</li>
+          <li class="list-group-item">Street Number: {{s.snum}}</li>
+          <li class="list-group-item">Brgy: {{s.brgy}}</li>
+          <li class="list-group-item">Zipcode: {{s.zip}}</li>
+          <li class="list-group-item">Province: {{s.province}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between p-1 m-3">
+      <a href="change_course" class="btn btn-primary">Change course</a>
+      <form action="#" method="POST">
+        <button type="submit" class="btn btn-danger">Delete Student</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="accordion m-5" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        Students List
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <ul class="list-group">
+          {% for s in std %}
+          <li class="list-group-item">{{s.lname}} {{s.fname}} {{s.mname}} {{s.ename}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock%}

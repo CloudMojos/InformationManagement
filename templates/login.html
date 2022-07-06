@@ -1,0 +1,40 @@
+{% extends 'master.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block nav_active %}
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link"  href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="register">Register</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Log in</a>
+    </li>
+  </ul>
+{% endblock %}
+
+{% block body %}
+<div class="accordion m-5" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        Login
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <form action="#" class="mb-2" method="POST">
+          <label class="form-label" for="email">Email: </label>
+          <input class="form-control" type="email" placeholder="jd.delacruz@gmail.com" name="email"/>
+          <button class="btn btn-primary mt-5" type="submit">Log in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

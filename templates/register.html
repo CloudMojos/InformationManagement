@@ -1,0 +1,259 @@
+{% extends 'master.html' %}
+
+{% block head %} <title>Student register</title> {% endblock %}
+
+{% block nav_active %}
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link"  href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login">Login</a>
+        </li>
+      </ul>
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+<form action="#" method="post" id="form" enctype="multipart/form-data">
+<div class="accordion m-2" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        College Information
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body row g-3">
+        <!-------------------------------------------------------------->
+        <div class="col">
+          <label class="mb-1 form-label" for="camp">Choose a campus:</label>
+          <select class="form-select" name="camp" form="form">
+            <option value="manila">Manila</option>
+            <option value="taguig">Taguig</option>
+            <option value="cavite">Cavite</option>
+            <option value="visayas">Visayas</option>
+          </select>
+        </div>
+
+        <div class="col">
+          <label class="mb-1 form-label" for="dept">Choose a college:</label>
+          <select class="form-select" name="dept" form="form">
+            <option value="College of Industrial Technology">College of Industrial Technology</option>
+            <option value="College of Engineering">College of Engineering</option>
+            <option value="College of Science">College of Science</option>
+            <option value="College of Architecture and Fine Arts">College of Architecture and Fine Arts</option>
+            <option value="College of Industrial Education">College of Industrial Education</option>
+            <option value="College of Liberal Arts">College of Liberal Arts</option>
+          </select>
+        </div>
+
+        <div class="col-12">
+          <label class="mb-1 form-label" for="course">Choose a course:</label>
+          <select class="form-select" name="course" form="form">
+            <option value="Bachelor of Science in Food Technology">Bachelor of Science in Food Technology</option>
+            <option value="Bachelor of Science in Hotel and Restaurant Management">Bachelor of Science in Hotel and Restaurant Management</option>
+            <option value="Bachelor of Engineering Technology">Bachelor of Engineering Technology</option>
+            <option value="Bachelor of Science in Civil Engineering">Bachelor of Science in Civil Engineering</option>
+            <option value="Bachelor of Science in Electrical Engineering">Bachelor of Science in Electrical Engineering</option>
+            <option value="Bachelor of Science in Electronics Engineering">Bachelor of Science in Electronics Engineering</option>
+            <option value="Bachelor of Science in Mechanical Engineering">Bachelor of Science in Mechanical Engineering</option>
+            <option value="Bachelor of Applied Science in Laboratory Technology">Bachelor of Applied Science in Laboratory Technology</option>
+            <option value="Bachelor of Science in Computer Science">Bachelor of Science in Computer Science</option>
+            <option value="Bachelor of Science in Environmental Science">Bachelor of Science in Environmental Science</option>
+            <option value="Bachelor of Science in Information System">Bachelor of Science in Information System</option>
+            <option value="Bachelor of Science in Information Technology">Bachelor of Science in Information Technology</option>
+            <option value="Bachelor of Science in Architecture">Bachelor of Science in Architecture</option>
+            <option value="Bachelor of Fine Arts">Bachelor of Fine Arts</option>
+            <option value="Bachelor in Graphics Technology">Bachelor in Graphics Technology</option>
+            <option value="Bachelor of Science Industrial Education">Bachelor of Science Industrial Education</option>
+            <option value="Bachelor of Technical Vocational Teachers Education">Bachelor of Technical Vocational Teachers Education</option>
+            <option value="Bachelor of Technical Teacher Education">Bachelor of Technical Teacher Education</option>
+            <option value="Bachelor of Arts in Management">Bachelor of Arts in Management</option>
+            <option value="Bachelor of Science in Entrepreneurship Management">Bachelor of Science in Entrepreneurship Management</option>
+          </select>
+        </div>
+        <!-------------------------------------------------------------->
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Personal Information pt.1
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body row g-3">
+        <!-------------------------------------------------------------------------->
+        <div class="col-4 mb-1">
+          <label class="form-label" for="fname">First name:</label>
+          <input class="form-control" type="text" name="fname"/>
+        </div>
+
+        <div class="col-3 mb-1">
+          <label class="form-label" for="mname">Middle name:</label>
+          <input class="form-control" type="text" name="mname"/>
+        </div>
+
+        <div class="col-3 mb-1">
+          <label class="form-label" for="lname">Last name:</label>
+          <input class="form-control" type="text" name="lname"/>
+        </div>
+
+        <div class="col-2 mb-1">
+          <label class="form-label" for="ename">Name extension:</label>
+          <input class="form-control" type="text" name="ename"/>
+        </div>
+
+        <div class="col-6 mb-1">
+          <label class="form-label" for="email">Email:</label>
+        <input class="form-control" type="email" name="email" placeholder="juan.delacruz@gmail.com"/>
+        </div>
+
+        <div class="col-6 mb-1">
+          <label class="form-label" for="fburl">Facebook URL:</label>
+        <input class="form-control" type="text" name="fburl" placeholder="https://www.facebook.com/jdelacruz"/>
+        </div>
+
+        <div class="col-5 mb-1">
+          <label class="form-label" for="cpnum">Cellphone Number:</label>
+        <input class="form-control" type="text" name="cpnum"/>
+        </div>
+
+        <div class="col-4 mb-1">
+          <label class="form-label" for="llnum">Landline Number:</label>
+        <input class="form-control" type="text" name="llnum"/>
+        </div>
+
+        <div class="col-3 mb-1">
+          <label class="form-label" for="lrn">Learner's Reference Number:</label>
+          <input class="form-control" type="text" name="lrn"/>
+        </div>
+        <!-------------------------------------------------------------------------->
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Personal Information pt.2
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body row g-3">
+        <!-------------------------------------------------------------------------->
+        <div class="col-2 mb-1">
+          <label class="form-label" for="gender">Gender:</label>
+          <select class="form-select" name="gender" form="form">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="NA">I'd rather not say</option>
+          </select>
+        </div>
+
+        <div class="col-2 mb-1">
+          <label class="form-label" for="bday">Birth date:</label>
+          <input class="form-control" type="date" name="bday"/>
+        </div>
+
+        <div class="col-4 mb-1">
+          <label class="form-label" for="citizenship">Citizenship:</label>
+          <input class="form-control" type="text" name="citizenship"/>
+        </div>
+
+        <div class="col-4 mb-1">
+          <label class="form-label" for="religion">Religion:</label>
+          <input class="form-control" type="text" name="religion"/>
+        </div>
+
+        <div class="col-8 mb-1">
+          <label class="form-label" for="birthplace">Birthplace:</label>
+          <input class="form-control" type="text" name="birthplace"/>
+        </div>
+
+        <div class="col-2 mb-1">
+          <label class="form-label" for="height">Height (cm):</label>
+          <input class="form-control" type="text" name="height"/>
+        </div>
+
+        <div class="col-2 mb-1">
+          <label class="form-label" for="weight">Weight (lb):</label>
+          <input class="form-control" type="text" name="weight"/>
+        </div>
+
+        <div class="col-4 mb-1">
+          <label class="form-label" for="cstatus">Civil status:</label>
+          <input class="form-control" type="text" name="cstatus"/>
+        </div>
+
+        <div class="col-8 mb-1">
+          <label class="form-label" for="fsupport">Methods of financial support:</label>
+          <input class="form-control" type="text" name="fsupport"/>
+        </div>
+        <!-------------------------------------------------------------------------->
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Personal Information pt.3
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body row g-3">
+        <!-------------------------------------------------------------------------->
+        <div class="col-2 mb-1">
+          <label class="form-label" for="unum">Unit number:</label>
+          <input class="form-control" type="text" name="unum"/>
+        </div>
+
+        <div class="col-3 mb-1">
+          <label class="form-label" for="snum">Street number:</label>
+          <input class="form-control" type="text" name="snum"/>
+        </div>
+
+        <div class="col-5 mb-1">
+          <label class="form-label" for="brgy">Barangay:</label>
+          <input class="form-control" type="text" name="brgy"/>
+        </div>
+
+        <div class="col-2 mb-1">
+          <label class="form-label" for="zip">Zipcode:</label>
+          <input class="form-control" type="number" name="zip"/>
+        </div>
+
+        <div class="col-5 mb-1">
+          <label class="form-label" for="province">Province:</label>
+          <input class="form-control" type="text" name="province"/>
+        </div>
+
+        <div class="col-7 mb-1">
+          <label class="form-label" for="pfp">Insert your valid picture:</label>
+          <input class="form-control" type="file" name="pfp" accept="image/*" onchange="loadFile(event)">
+        </div>
+
+        <img class="mx-auto d-block rounded-5" id="pfp_output" style="max-width: 20rem;"/>
+        <!-------------------------------------------------------------------------->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid p-3">
+  <button class="btn btn-primary" type="submit" value="submit">Submit form</button>
+</div>
+</form>
+</div>
+
+<script>
+  var loadFile = function(event) {
+    var image = document.getElementById('pfp_output');
+    image.src = URL.createObjectURL(event.target.files[0]);
+  };
+</script>
+{% endblock %}
+

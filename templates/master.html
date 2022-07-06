@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="../static/main.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block head %}{% endblock%}
+</head>
+
+<body class="text-light bg-dark">
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #881528;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="https://www.google.com/search?gs_ssp=eJzj4tTP1TdILqpIMzNg9NIuSU3OyMvPyU_PTE7MUSjNyyxLLSrOLKlUyE9TKMlIVSjIyMzJLCjIzEstBgAu5RSX&q=technological+university+of+the+philippines&oq=tec&aqs=chrome.1.69i59j46i39j69i57j69i61j69i60j69i65j69i60j69i61.3035j0j7&sourceid=chrome&ie=UTF-8" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Technological_University_of_the_Philippines_Seal.svg/1200px-Technological_University_of_the_Philippines_Seal.svg.png" alt="" width="40" height="40" class="d-inline-block align-text-center">
+      Technological University of the Philippines
+    </a>
+    <div class="d-flex justify-content-end" id="navbar">
+      {% block nav_active %}
+      {% endblock %}
+    </div>
+  </div>
+</nav>
+  {% block body %}{% endblock %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
+
