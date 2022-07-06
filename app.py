@@ -127,7 +127,7 @@ def register():
 
     found_email = Students.query.filter_by(email = new_student.email).first()
     if found_email:
-       pass
+       return redirect('/')
     else:
       db.session.add(new_student)
       db.session.commit()
